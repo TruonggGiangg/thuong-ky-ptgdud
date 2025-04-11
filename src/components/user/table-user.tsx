@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { ProTable, TableDropdown } from '@ant-design/pro-components';
 import { Card, Typography, Button, Space, message, Dropdown } from 'antd';
 import { PlusOutlined, EllipsisOutlined } from '@ant-design/icons';
@@ -54,6 +54,9 @@ const COLOR_PALETTE = {
 
 const TableUser: React.FC = () => {
     const actionRef = useRef<ActionType | null>(null);
+
+
+
 
     // Validate and format date
     const formatDate = (date: string | undefined | null): string => {
@@ -118,7 +121,7 @@ const TableUser: React.FC = () => {
         {
             title: 'Tuổi',
             dataIndex: 'age',
-            sorter: true,
+
 
             hideInSearch: true,
         },
@@ -187,7 +190,7 @@ const TableUser: React.FC = () => {
             title: 'Ngày tạo',
             dataIndex: 'createdAt',
             valueType: 'dateTime',
-            sorter: true,
+
 
             hideInSearch: true,
             render: (_: any, record: User) => formatDate(record.createdAt),
@@ -196,23 +199,11 @@ const TableUser: React.FC = () => {
             title: 'Ngày cập nhật',
             dataIndex: 'updatedAt',
             valueType: 'dateTime',
-            sorter: true,
+
             hideInSearch: true,
             render: (_: any, record: User) => formatDate(record.updatedAt),
         },
-        {
-            title: 'Thời gian tạo/cập nhật',
-            dataIndex: 'createdAt',
-            valueType: 'dateRange',
-            hideInTable: true,
-            search: {
-                transform: (value) => ({
-                    startTime: value[0],
-                    endTime: value[1],
-                }),
-            },
-            hideInSearch: true,
-        },
+
         {
             title: 'Hành động',
             valueType: 'option',
@@ -303,6 +294,7 @@ const TableUser: React.FC = () => {
         role?: string;
         [key: string]: any;
     }) => {
+
         try {
             // Fetch all data or current page without name/email filters
             const response = await axios.get<PaginatedResponse>(
@@ -350,6 +342,7 @@ const TableUser: React.FC = () => {
                 total: 0,
             };
         }
+
     };
 
 
@@ -369,13 +362,19 @@ const TableUser: React.FC = () => {
                 <ProTable<User>
 
 
-
                     direction='ltr'
                     scroll={{ x: 1000 }}
                     columns={columns}
                     actionRef={actionRef}
                     cardBordered
                     request={requestTableData}
+                    // loading={loading}
+                    rowSelection={{
+                        alwaysShowAlert: true,
+                        onChange: (selectedRowKeys, selectedRows) => {
+                            console.log('Selected rows:', selectedRowKeys, selectedRows);
+                        },
+                    }}
 
                     rowKey="_id"
                     search={{
