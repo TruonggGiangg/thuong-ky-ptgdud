@@ -1,11 +1,12 @@
 // import ProductTable from "../components/product/product.table"
 
+import UserTable from "../components/user/table-user"
+
 const ProductPage = () => {
 
     return (
         <>
-            User Page
-            {/* <ProductTable /> */}
+            <UserTable />
         </>
     )
 }
