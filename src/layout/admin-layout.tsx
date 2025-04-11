@@ -27,11 +27,11 @@ function getItem(label: React.ReactNode, key: React.Key, icon?: React.ReactNode,
 }
 
 const items: MenuItem[] = [
-  getItem(<Link to="/">Dashboard</Link>, "0", <PieChartOutlined />),
-  getItem(<Link to="/product">Product</Link>, "1", <BookOutlined />),
-  getItem("Order", "2", <OrderedListOutlined />),
-  getItem("User", "3", <UserOutlined />),
-  getItem("Team", "4", <TeamOutlined />),
+  getItem(<Link to="/">Dashboard</Link>, "1", <PieChartOutlined />),
+  getItem(<Link to="/product">Product</Link>, "2", <BookOutlined />),
+  getItem("Order", "3", <OrderedListOutlined />),
+  getItem("User", "4", <UserOutlined />),
+  getItem("Team", "5", <TeamOutlined />),
 ];
 
 const AdminLayout: React.FC = () => {
