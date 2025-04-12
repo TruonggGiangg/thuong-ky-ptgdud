@@ -71,6 +71,7 @@ const AdminLayout: React.FC = () => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            width: "100%",
           }}
         >
           {/* Bên trái: Placeholder */}
@@ -100,6 +101,7 @@ const AdminLayout: React.FC = () => {
 
         {/* Content */}
         <Content style={{ margin: "0 16px" }}>
+
           <Outlet />
         </Content>
 

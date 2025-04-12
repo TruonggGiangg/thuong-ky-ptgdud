@@ -1,191 +1,279 @@
 {
-
-
-   "users": [
-      {
-        "_id": "user1",
-        "name": "Nguyen Van A 1",
-        "email": "nguyenvana@example.com",
-        "age": 25,
-        "gender": "Nam",
-        "address": "123 Đường Láng, Hà Nội",
-        "__v": 0,
-        "role": "admin",
-        "createdAt": "2025-01-01T10:00:00Z",
-        "updatedAt": "2025-01-02T15:30:00Z",
-        "createdBy": {
-          "_id": "admin1",
-          "email": "admin1@example.com"
-        },
-        "updatedBy": {
-          "_id": "admin2",
-          "email": "admin2@example.com"
-        },
-        "password": "hashedPassword123"
+  "users": [
+    {
+      "_id": "user1",
+      "name": "Nguyen Van A 1",
+      "email": "nguyenvana@example.com",
+      "age": 27,
+      "gender": "Nam",
+      "address": "123 Đường Láng, Hà Nội",
+      "__v": 0,
+      "role": "admin",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-04-12T17:57:21.193Z",
+      "createdBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
       },
-      {
-        "_id": "user2",
-        "name": "Tran Thi B 1",
-        "email": "tranthib@example.com",
-        "age": 30,
-        "gender": "Nữ",
-        "address": "456 Lê Lợi, TP.HCM",
-        "__v": 1,
-        "role": "user",
-        "createdAt": "2025-02-01T09:15:00Z",
-        "updatedAt": "2025-02-03T14:45:00Z",
-        "isDeleted": "2025-02-04T10:00:00Z",
-        "deletedAt": "2025-02-04T10:00:00Z",
-        "createdBy": {
-          "_id": "admin1",
-          "email": "admin1@example.com"
-        },
-        "deletedBy": {
-          "_id": "admin3",
-          "email": "admin3@example.com"
-        },
-        "password": "hashedPassword456"
+      "updatedBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
       },
-      {
-        "_id": "user3",
-        "name": "Le Van C 1",
-        "email": "levanc@example.com",
-        "age": 22,
-        "gender": "Nam",
-        "address": "789 Nguyễn Huệ, Đà Nẵng",
-        "__v": 0,
-        "role": "moderator",
-        "createdAt": "2025-03-01T08:30:00Z",
-        "updatedAt": "2025-03-04T16:00:00Z",
-        "createdBy": {
-          "_id": "admin2",
-          "email": "admin2@example.com"
-        },
-        "updatedBy": {
-          "_id": "admin2",
-          "email": "admin2@example.com"
-        },
-        "password": "hashedPassword789"
+      "password": "hashedPassword123",
+      "id": "3129",
+      "index": 0
+    },
+    {
+      "_id": "user1",
+      "name": "Nguyen Van A 1",
+      "email": "nguyenvana@example.com",
+      "age": 27,
+      "gender": "Nam",
+      "address": "123 Đường Láng, Hà Nội",
+      "__v": 0,
+      "role": "admin",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-04-12T17:57:21.193Z",
+      "createdBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "updatedBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "password": "hashedPassword123",
+      "id": "3129",
+      "index": 0
+    },
+    {
+      "_id": "user1",
+      "name": "Nguyen Van A 1",
+      "email": "nguyenvana@example.com",
+      "age": 27,
+      "gender": "Nam",
+      "address": "123 Đường Láng, Hà Nội",
+      "__v": 0,
+      "role": "admin",
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-04-12T17:57:21.193Z",
+      "createdBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "updatedBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "password": "hashedPassword123",
+      "id": "3129",
+      "index": 0
+    },
+    {
+      "_id": "user2",
+      "name": "Tran Thi B 1",
+      "email": "tranthib@example.com",
+      "age": 30,
+      "gender": "Nữ",
+      "address": "456 Lê Lợi, TP.HCM",
+      "__v": 1,
+      "role": "user",
+      "createdAt": "2025-02-01T09:15:00Z",
+      "updatedAt": "2025-02-03T14:45:00Z",
+      "isDeleted": "2025-02-04T10:00:00Z",
+      "deletedAt": "2025-02-04T10:00:00Z",
+      "createdBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "deletedBy": {
+        "_id": "admin3",
+        "email": "admin3@example.com"
+      },
+      "password": "hashedPassword456",
+      "id": "d676"
+    },
+    {
+      "_id": "user3",
+      "name": "Le Van C 1",
+      "email": "levanc@example.com",
+      "age": 22,
+      "gender": "Nam",
+      "address": "789 Nguyễn Huệ, Đà Nẵng",
+      "__v": 0,
+      "role": "moderator",
+      "createdAt": "2025-03-01T08:30:00Z",
+      "updatedAt": "2025-03-04T16:00:00Z",
+      "createdBy": {
+        "_id": "admin2",
+        "email": "admin2@example.com"
+      },
+      "updatedBy": {
+        "_id": "admin2",
+        "email": "admin2@example.com"
+      },
+      "password": "hashedPassword789",
+      "id": "3d35"
+    },
+    {
+      "id": "e9b2",
+      "name": "letruonggiang2004@gmail.com",
+      "email": "truonggiang2129911z@gmail.com",
+      "password": "dasdasd",
+      "age": 12,
+      "gender": "Nam",
+      "address": "abc",
+      "role": "admin",
+      "createdAt": "2025-04-12T18:07:12.875Z",
+      "updatedAt": "2025-04-12T18:07:12.875Z",
+      "createdBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
+      },
+      "updatedBy": {
+        "_id": "admin1",
+        "email": "admin1@example.com"
       }
-      
-    ],
-    "products": [
-      { "id": 1, "name": "Book A", "price": 10 },
-      { "id": 2, "name": "Book B", "price": 15 }
-    ],
-    "orders": [
-      { "id": 1, "productId": 1, "quantity": 2 },
-      { "id": 2, "productId": 2, "quantity": 1 }
-    ],
-    "statistics": [
-        {
-          "id": 1,
-          "label": "Tháng 1",
-          "revenue": 5000,
-          "orders": 120,
-          "newCustomers": 45
-        },
-        {
-          "id": 2,
-          "label": "Tháng 2",
-          "revenue": 6000,
-          "orders": 150,
-          "newCustomers": 55
-        },
-        {
-          "id": 3,
-          "label": "Tháng 3",
-          "revenue": 7000,
-          "orders": 170,
-          "newCustomers": 60
-        },
-        {
-          "id": 4,
-          "label": "Tháng 4",
-          "revenue": 8000,
-          "orders": 200,
-          "newCustomers": 70
-        },
-        {
-          "id": 5,
-          "label": "Tháng 5",
-          "revenue": 9000,
-          "orders": 220,
-          "newCustomers": 80
-        },
-        {
-          "id": 6,
-          "label": "Tháng 6",
-          "revenue": 10000,
-          "orders": 250,
-          "newCustomers": 90
-        },
-        {
-          "id": 7,
-          "label": "Tháng 7",
-          "revenue": 11000,
-          "orders": 280,
-          "newCustomers": 100
-        },
-        {
-          "id": 8,
-          "label": "Tháng 8",
-          "revenue": 12000,
-          "orders": 300,
-          "newCustomers": 110
-        },
-        {
-          "id": 9,
-          "label": "Tháng 9",
-          "revenue": 13000,
-          "orders": 320,
-          "newCustomers": 120
-        },
-        {
-          "id": 10,
-          "label": "Tháng 10",
-          "revenue": 14000,
-          "orders": 350,
-          "newCustomers": 130
-        }
-      ],
-      
-      "productCategories": [
-        {
-          "category": "Sách",
-          "value": 50
-        },
-        {
-          "category": "Văn phòng phẩm",
-          "value": 30
-        },
-        {
-          "category": "Dụng cụ học tập",
-          "value": 20
-        },
-        {
-          "category": "Thiết bị điện tử",
-          "value": 40
-        },
-        {
-          "category": "Giày dép",
-          "value": 25
-        }
-      ],
-      
-      "customerGender": [
-        {
-          "gender": "Nam",
-          "value": 120
-        },
-        {
-          "gender": "Nữ",
-          "value": 80
-        },
-        {
-          "gender": "Khác",
-          "value": 10
-        }
-      ]
-      
-  }
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Book A",
+      "price": 10
+    },
+    {
+      "id": "2",
+      "name": "Book B",
+      "price": 15
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "id": "2",
+      "productId": 2,
+      "quantity": 1
+    }
+  ],
+  "statistics": [
+    {
+      "id": "1",
+      "label": "Tháng 1",
+      "revenue": 5000,
+      "orders": 120,
+      "newCustomers": 45
+    },
+    {
+      "id": "2",
+      "label": "Tháng 2",
+      "revenue": 6000,
+      "orders": 150,
+      "newCustomers": 55
+    },
+    {
+      "id": "3",
+      "label": "Tháng 3",
+      "revenue": 7000,
+      "orders": 170,
+      "newCustomers": 60
+    },
+    {
+      "id": "4",
+      "label": "Tháng 4",
+      "revenue": 8000,
+      "orders": 200,
+      "newCustomers": 70
+    },
+    {
+      "id": "5",
+      "label": "Tháng 5",
+      "revenue": 9000,
+      "orders": 220,
+      "newCustomers": 80
+    },
+    {
+      "id": "6",
+      "label": "Tháng 6",
+      "revenue": 10000,
+      "orders": 250,
+      "newCustomers": 90
+    },
+    {
+      "id": "7",
+      "label": "Tháng 7",
+      "revenue": 11000,
+      "orders": 280,
+      "newCustomers": 100
+    },
+    {
+      "id": "8",
+      "label": "Tháng 8",
+      "revenue": 12000,
+      "orders": 300,
+      "newCustomers": 110
+    },
+    {
+      "id": "9",
+      "label": "Tháng 9",
+      "revenue": 13000,
+      "orders": 320,
+      "newCustomers": 120
+    },
+    {
+      "id": "10",
+      "label": "Tháng 10",
+      "revenue": 14000,
+      "orders": 350,
+      "newCustomers": 130
+    }
+  ],
+  "productCategories": [
+    {
+      "category": "Sách",
+      "value": 50,
+      "id": "8dc0"
+    },
+    {
+      "category": "Văn phòng phẩm",
+      "value": 30,
+      "id": "51cf"
+    },
+    {
+      "category": "Dụng cụ học tập",
+      "value": 20,
+      "id": "98c3"
+    },
+    {
+      "category": "Thiết bị điện tử",
+      "value": 40,
+      "id": "6c27"
+    },
+    {
+      "category": "Giày dép",
+      "value": 25,
+      "id": "c466"
+    }
+  ],
+  "customerGender": [
+    {
+      "gender": "Nam",
+      "value": 120,
+      "id": "2dfe"
+    },
+    {
+      "gender": "Nữ",
+      "value": 80,
+      "id": "1315"
+    },
+    {
+      "gender": "Khác",
+      "value": 10,
+      "id": "712c"
+    }
+  ]
+}
