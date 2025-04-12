@@ -73,7 +73,7 @@ const Chart: React.FC = () => {
       data: statistics.length > 0 ? statistics : [{ label: 'No Data', revenue: 0 }],
       xField: 'label',
       yField: 'revenue',
-      label: { position: 'top', style: { fontSize: 14, fontWeight: 'bold', fill: '#333' } },
+      label: { position: 'top', style: { fontSize: 14, fontWeight: 'bold', fill: '#FF99AA' } },
       color: COLOR_PALETTE.primary,
       // tooltip: {
       //   formatter: (datum: { revenue: number; label: string }) => ({
@@ -151,11 +151,20 @@ const Chart: React.FC = () => {
   }
 
   return (
-    <div style={{ padding: '24px', background: '#f0f2f5', minHeight: '100vh' }}>
-      <Title level={2} style={{ textAlign: 'center', marginBottom: '32px', color: '#1a1a1a' }}>
-        📊 Thống kê doanh số
-      </Title>
+    <>
 
+
+      <h1
+        style={{
+          fontSize: '24px',
+          fontWeight: 600,
+          marginBottom: '16px',
+
+          textAlign: 'center',
+          textTransform: 'uppercase',
+        }
+        }
+      >Thống kê</h1>
       {error && (
         <Alert
           message={error}
@@ -174,8 +183,10 @@ const Chart: React.FC = () => {
         <Col xs={24} md={12}>
           <Card
             title="📈 Doanh thu theo tháng"
-            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-            hoverable
+            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', backgroundColor: '#fff' }}
+
+
+            headStyle={{ backgroundColor: "#FF99AA", color: '#fff' }}
           >
             {statistics.length > 0 ? <Column {...revenueConfig} /> : <p>Không có dữ liệu</p>}
           </Card>
@@ -184,8 +195,10 @@ const Chart: React.FC = () => {
         <Col xs={24} md={12}>
           <Card
             title="🛍️ Phân loại sản phẩm"
-            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-            hoverable
+            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', backgroundColor: '#fff' }}
+
+
+            headStyle={{ backgroundColor: "#FF99AA", color: '#fff' }}
           >
             {productCategories.length > 0 ? <Pie {...categoryConfig} /> : <p>Không có dữ liệu</p>}
           </Card>
@@ -194,8 +207,9 @@ const Chart: React.FC = () => {
         <Col xs={24} md={12}>
           <Card
             title="📦 Số đơn hàng theo tháng"
-            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-            hoverable
+            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', backgroundColor: '#fff' }}
+
+            headStyle={{ backgroundColor: "#FF99AA", color: '#fff' }}
           >
             {statistics.length > 0 ? <Line {...orderConfig} /> : <p>Không có dữ liệu</p>}
           </Card>
@@ -204,14 +218,15 @@ const Chart: React.FC = () => {
         <Col xs={24} md={12}>
           <Card
             title="👥 Tỷ lệ khách hàng theo giới tính"
-            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-            hoverable
+            style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', backgroundColor: '#fff' }}
+
+            headStyle={{ backgroundColor: "#FF99AA", color: '#fff' }}
           >
             {customerGender.length > 0 ? <Pie {...genderConfig} /> : <p>Không có dữ liệu</p>}
           </Card>
         </Col>
       </Row>
-    </div>
+    </>
   );
 };
 

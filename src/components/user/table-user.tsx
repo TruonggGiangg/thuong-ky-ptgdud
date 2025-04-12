@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { ProTable } from '@ant-design/pro-components';
 import { Card, Typography, Button, Space, message, Dropdown, Popconfirm } from 'antd';
-import { PlusOutlined, EllipsisOutlined, DeleteOutlined } from '@ant-design/icons';
+import { PlusOutlined, EllipsisOutlined, DeleteOutlined, ImportOutlined, ExportOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import dayjs from 'dayjs';
@@ -332,6 +332,7 @@ const TableUser: React.FC = () => {
                     onConfirm={() => deleteUser(record.id)}
                     okText="Có"
                     cancelText="Không"
+                    style={{ margin: '0', padding: '0' }}
                 >
                     <a style={{ color: COLOR_PALETTE.secondary }}>Xóa</a>
                 </Popconfirm>,
@@ -432,7 +433,7 @@ const TableUser: React.FC = () => {
     };
 
     return (
-        <div style={{ padding: '24px', background: '#f0f2f5', minHeight: '100vh' }}>
+        <>
             <UserCreate
                 isOpenCreateModal={isOpenCreateModal}
                 setIsOpenCreateModal={setIsOpenCreateModal}
@@ -444,9 +445,17 @@ const TableUser: React.FC = () => {
                 dataDetailModal={dataDetailModal}
                 setDataDetailModal={setDataDetailModal}
             />
-            <Title level={2} style={{ textAlign: 'center', marginBottom: '32px', color: '#1a1a1a' }}>
-                Bảng người dùng
-            </Title>
+            <h1
+                style={{
+                    fontSize: '24px',
+                    fontWeight: 600,
+                    marginBottom: '16px',
+
+                    textAlign: 'center',
+                    textTransform: 'uppercase',
+                }
+                }
+            >Quản lý người dùng</h1>
             <Card
                 style={{
                     borderRadius: '12px',
@@ -455,6 +464,9 @@ const TableUser: React.FC = () => {
                 hoverable
             >
                 <ProTable<User>
+                    //cuộn
+                    // scroll={{ x: 1200 }}
+
                     direction='ltr'
                     columns={columns}
                     actionRef={actionRef}
@@ -476,13 +488,19 @@ const TableUser: React.FC = () => {
                             setSelectedRowKeys(newSelectedRowKeys);
                         },
                     }}
+
+
+
                     rowKey="id"
                     search={{
                         labelWidth: 'auto',
                         defaultCollapsed: false,
                     }}
                     options={{
+                        fullScreen: true,
                         density: true,
+
+
                     }}
                     form={{
                         syncToUrl: (values, type) => {
@@ -526,6 +544,23 @@ const TableUser: React.FC = () => {
                         >
                             Thêm mới
                         </Button>,
+                        <Button
+
+                            icon={<ImportOutlined />}
+                            onClick={() => {
+
+                            }}
+                            type="primary"
+                        >
+                            Import
+                        </Button>,
+
+                        <Button
+                            icon={<ExportOutlined />}
+                            type="primary"
+                        >
+                            Export
+                        </Button>,
                         <Popconfirm
                             key="delete-selected"
                             title={`Bạn có chắc muốn xóa ${selectedRowKeys.length} người dùng?`}
@@ -562,7 +597,7 @@ const TableUser: React.FC = () => {
                     }}
                 />
             </Card>
-        </div>
+        </>
     );
 };
 
